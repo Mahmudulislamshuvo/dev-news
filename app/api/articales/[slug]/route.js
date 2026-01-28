@@ -20,7 +20,7 @@ export async function GET(_request, { params }) {
   );
 }
 
-export async function DELETE(request, { params }) {
+export async function DELETE(_request, { params }) {
   const slug = params.slug;
   const allArticales = getAllArticales();
 
@@ -28,8 +28,7 @@ export async function DELETE(request, { params }) {
 
   if (index === -1) {
     return NextResponse.json(
-      { data: null },
-      { message: "Articale not found" },
+      { data: null, message: "Articale not found" },
       { status: 404 },
     );
   }
@@ -37,8 +36,10 @@ export async function DELETE(request, { params }) {
   const deletedArticale = allArticales.splice(index, 1);
   // Placeholder for DELETE logic
   return NextResponse.json(
-    { data: deletedArticale },
-    { message: `Articale with slug ${slug} deleted successfully` },
+    {
+      data: deletedArticale,
+      message: `Articale with slug /${slug} deleted successfully`,
+    },
     { status: 200 },
   );
 }
