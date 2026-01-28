@@ -57,21 +57,25 @@ export async function PATCH(request, { params }) {
 
   const updateinfo = await request.json();
 
-  if (updateinfo.title || updateinfo.description) {
+  const { title, description } = updateinfo;
+
+  if (title || description) {
     allArticales[index] = {
       ...allArticales[index],
-      ...updateinfo,
+      ...(title && { title }),
+      ...(description && { description }),
     };
-
     return NextResponse.json(
-      { data: allArticales[index], message: "Articale updated successfully" },
+      {
+        data: allArticales[index],
+        message: "Articale updated successfully",
+      },
       { status: 201 },
     );
   }
 
   return NextResponse.json(
-    { data: null },
-    { message: "No valid fields to update" },
+    { data: null, message: "No valid fields to update" },
     { status: 400 },
   );
 }
