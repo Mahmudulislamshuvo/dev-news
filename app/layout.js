@@ -1,15 +1,13 @@
-import localFont from "next/font/local";
+import BeforeNav from "@/components/BeforeNav";
 import "./globals.css";
+import { DM_Serif_Display } from "next/font/google";
+import Navbar from "@/components/Navbar";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const dmSerif = DM_Serif_Display({
+  subsets: ["latin"],
+  weight: "400",
+  style: "normal",
+  variable: "--font-dm-serif",
 });
 
 export const metadata = {
@@ -20,10 +18,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${dmSerif.variable} bg-bg min-h-screen text-zinc-100`}>
+        <div className="relative overflow-hidden">
+          <BeforeNav />
+          <div className="relative mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+            <Navbar />
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );
