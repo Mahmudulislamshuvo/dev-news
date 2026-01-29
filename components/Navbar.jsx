@@ -1,22 +1,25 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
     <>
       <header className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-        <div className="flex items-center gap-4">
-          <div className="rounded-2xl bg-gradient-to-br from-cyan-300 via-emerald-300 to-sky-400 p-[1px] shadow-[0_0_30px_rgba(94,234,212,0.25)]">
-            <div className="flex h-12 w-12 items-center justify-center rounded-[15px] bg-[#0b0d12] text-lg font-semibold text-white">
-              DN
+        <Link href="/">
+          <div className="flex items-center gap-4">
+            <div className="rounded-2xl bg-gradient-to-br from-cyan-300 via-emerald-300 to-sky-400 p-[1px] shadow-[0_0_30px_rgba(94,234,212,0.25)]">
+              <div className="flex h-12 w-12 items-center justify-center rounded-[15px] bg-[#0b0d12] text-lg font-semibold text-white">
+                DN
+              </div>
+            </div>
+            <div>
+              <h1 className="text-2xl font-semibold text-white">Dev News</h1>
+              <p className="mt-1 text-sm text-zinc-400">
+                Signals from the builders shaping tomorrow.
+              </p>
             </div>
           </div>
-          <div>
-            <h1 className="text-2xl font-semibold text-white">Dev News</h1>
-            <p className="mt-1 text-sm text-zinc-400">
-              Signals from the builders shaping tomorrow.
-            </p>
-          </div>
-        </div>
+        </Link>
 
         <div className="flex w-full items-center md:max-w-md">
           <div className="relative w-full">

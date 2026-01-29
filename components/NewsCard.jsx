@@ -1,11 +1,11 @@
-import { getAllArticales } from "@/lib/getArticales";
+import { getAllArticalesDynamic } from "@/lib/getArticales";
 import { formatCompactNumber } from "@/utils/formatCompactNumber";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const NewsCard = () => {
-  const allArticalesData = getAllArticales();
+const NewsCard = async () => {
+  const allArticalesData = await getAllArticalesDynamic();
 
   return (
     <>

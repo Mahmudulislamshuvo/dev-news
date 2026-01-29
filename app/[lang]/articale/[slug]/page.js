@@ -1,11 +1,11 @@
-import { getArticaleBySlug } from "@/lib/getArticales";
+import { getArticaleBySlugDynamic } from "@/lib/getArticales";
 import { formatCompactNumber } from "@/utils/formatCompactNumber";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-const SingleArticale = ({ params: { slug } }) => {
-  const singleArticaleData = getArticaleBySlug(slug);
+const SingleArticale = async ({ params: { slug } }) => {
+  const singleArticaleData = await getArticaleBySlugDynamic(slug);
 
   if (!singleArticaleData) {
     notFound();
