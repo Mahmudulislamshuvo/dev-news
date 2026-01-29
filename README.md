@@ -1,14 +1,9 @@
 # Dev News
 
+**Live Video:**
 https://github.com/user-attachments/assets/0e74116f-8375-455b-838d-5e2494ee9f2b
 
 A modern, feature-rich news aggregator platform for developers, built with Next.js and Tailwind CSS. It provides a clean, dark-themed interface to browse and read the latest articles and signals from the tech world.
-
-![Dev News Screenshot](https://via.placeholder.com/800x400.png?text=Dev+News+Screenshot)
-
-**(Note: The screen recording link you provided was not accessible. This README is based on my understanding of the project. Please replace the placeholder image link above with a real screenshot.)**
-
-**Live Demo:** [dev-news.example.com](https://dev-news.example.com) _(<-- Replace with your actual deployment link)_
 
 ---
 
