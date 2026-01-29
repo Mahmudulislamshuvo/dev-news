@@ -2,7 +2,12 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
-const Modal = ({ isOpen, onClose, children, className = "" }) => {
+const Modal = ({
+  isOpen,
+  onClose,
+  children,
+  className: widthClass = "max-w-lg",
+}) => {
   const [mounted, setMounted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -12,16 +17,27 @@ const Modal = ({ isOpen, onClose, children, className = "" }) => {
 
   // 2. Handle Animation & Body Scroll Lock
   useEffect(() => {
+    let scrollTimer;
+    let visibilityTimer;
+
     if (isOpen) {
       setIsVisible(true);
       document.body.style.overflow = "hidden";
     } else {
-      setIsVisible(false);
-      const timer = setTimeout(() => {
+      scrollTimer = setTimeout(() => {
         document.body.style.overflow = "unset";
       }, 300);
-      return () => clearTimeout(timer);
+      visibilityTimer = setTimeout(() => {
+        setIsVisible(false);
+      }, 300);
     }
+
+    return () => {
+      clearTimeout(scrollTimer);
+      clearTimeout(visibilityTimer);
+      // Failsafe to restore scroll if component unmounts unexpectedly
+      document.body.style.overflow = "unset";
+    };
   }, [isOpen]);
 
   // 3. Handle Escape Key
@@ -49,9 +65,9 @@ const Modal = ({ isOpen, onClose, children, className = "" }) => {
 
       {/* --- MODAL CONTENT WRAPPER --- */}
       <div
-        className={`relative w-full max-w-lg transform rounded-2xl bg-[#10131b] border border-white/10 shadow-2xl transition-all duration-300 ${
+        className={`relative w-full ${widthClass} transform rounded-2xl bg-[#10131b] border border-white/10 shadow-2xl transition-all duration-300 ${
           isOpen ? "scale-100 translate-y-0" : "scale-95 translate-y-4"
-        } ${className}`} // আপনার কাস্টম ক্লাস এখানে যুক্ত হবে
+        }`}
       >
         {/* Close Button (Optional - চাইলে মুছে দিতে পারেন) */}
         <button

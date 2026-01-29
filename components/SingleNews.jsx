@@ -15,7 +15,11 @@ const SingleNews = ({ singleArticaleData }) => {
 
   return (
     <>
-      <Modal isOpen={isLoginModalOpen} onClose={() => handleCloseModal()}>
+      <Modal
+        isOpen={isLoginModalOpen}
+        onClose={() => handleCloseModal()}
+        className="max-w-5xl"
+      >
         <SingleArticale singleArticaleData={singleArticaleData} />
       </Modal>
     </>
