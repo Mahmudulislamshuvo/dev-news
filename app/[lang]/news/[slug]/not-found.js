@@ -1,6 +1,5 @@
 "use client";
 
-import { getAllArticales } from "@/lib/getArticales";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

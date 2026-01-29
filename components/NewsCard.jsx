@@ -17,7 +17,7 @@ const NewsCard = async () => {
             className="rounded-2xl bg-gradient-to-br from-white/15 via-white/5 to-transparent p-[1px] reveal"
             style={{ animationDelay: "0ms" }}
           >
-            <Link href={`/articale/${articale.slug}`}>
+            <Link href={`/news/${articale.slug}`}>
               <article className="group h-full rounded-2xl border border-white/10 bg-[var(--surface)] p-5 shadow-[0_24px_50px_rgba(5,8,16,0.55)] transition hover:-translate-y-1 hover:border-cyan-300/40">
                 <div className="aspect-video overflow-hidden rounded-xl">
                   <Image
