@@ -4,7 +4,7 @@ import Modal from "./Modal";
 import SingleArticale from "./SingleArticale";
 import { useRouter } from "next/navigation";
 
-const SingleNews = ({ singleArticaleData }) => {
+const SingleNews = ({ singleArticaleData, dictionary }) => {
   const router = useRouter();
   const [isLoginModalOpen, setLoginModalOpen] = useState(true);
 
@@ -20,7 +20,10 @@ const SingleNews = ({ singleArticaleData }) => {
         onClose={() => handleCloseModal()}
         className="max-w-5xl"
       >
-        <SingleArticale singleArticaleData={singleArticaleData} />
+        <SingleArticale
+          singleArticaleData={singleArticaleData}
+          dictionary={dictionary}
+        />
       </Modal>
     </>
   );

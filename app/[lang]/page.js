@@ -3,7 +3,7 @@ import PageTitle from "@/components/PageTitle";
 
 const Home = ({ params: { lang } }) => {
   return (
-    <main class="mt-12">
+    <main className="mt-12">
       <PageTitle />
       <NewsCard />
     </main>

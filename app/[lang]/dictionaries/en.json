@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "title": "Dev News",
+    "description": "Latest updates and articles for developers"
+  },
+  "navbar": {
+    "siteName": "Dev News",
+    "siteSlogan": "Signals from the builders shaping tomorrow.",
+    "searchPlaceholder": "Search stories, tags, authors",
+    "userName": "Alex Rivera",
+    "userStatus": "Pro member"
+  },
+  "pageTitle": {
+    "trendingToday": "Trending Today",
+    "trendingSlogan": "Fresh signals from product teams and indie builders."
+  },
+  "newsCard": {
+    "postedAgo": "1 day ago"
+  },
+  "singleArticle": {
+    "backToHome": "Back to home",
+    "publishedOn": "Published on",
+    "engagement": "Engagement",
+    "upvotes": "Upvotes",
+    "downvotes": "Downvotes",
+    "views": "Views",
+    "tags": "Tags",
+    "author": "Author",
+    "authorRole": "Content Creator"
+  }
+}

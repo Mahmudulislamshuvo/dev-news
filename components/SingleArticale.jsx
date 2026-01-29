@@ -2,7 +2,7 @@ import { formatCompactNumber } from "@/utils/formatCompactNumber";
 import Image from "next/image";
 import Link from "next/link";
 
-const SingleArticale = ({ singleArticaleData }) => {
+const SingleArticale = ({ singleArticaleData, dictionary }) => {
   const {
     title,
     description,

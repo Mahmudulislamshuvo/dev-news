@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "title": "ডেভ নিউজ",
+    "description": "ডেভেলপারদের জন্য সর্বশেষ আপডেট এবং নিবন্ধ"
+  },
+  "navbar": {
+    "siteName": "ডেভ নিউজ",
+    "siteSlogan": "আগামীকে রূপদানকারী নির্মাতাদের কাছ থেকে সংকেত।",
+    "searchPlaceholder": "গল্প, ট্যাগ, লেখক অনুসন্ধান করুন",
+    "userName": "অ্যালেক্স রিভেরা",
+    "userStatus": "প্রো সদস্য"
+  },
+  "pageTitle": {
+    "trendingToday": "আজকের ট্রেন্ডিং",
+    "trendingSlogan": "পণ্য দল এবং ইন্ডি নির্মাতাদের কাছ থেকে তাজা সংকেত।"
+  },
+  "newsCard": {
+    "postedAgo": "১ দিন আগে"
+  },
+  "singleArticle": {
+    "backToHome": "হোমে ফিরে যান",
+    "publishedOn": "প্রকাশিত",
+    "engagement": "এনগেজমেন্ট",
+    "upvotes": "আপভোট",
+    "downvotes": "ডাউনভোট",
+    "views": "ভিউ",
+    "tags": "ট্যাগ",
+    "author": "লেখক",
+    "authorRole": "কনটেন্ট ক্রিয়েটর"
+  }
+}
