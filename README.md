@@ -1,6 +1,6 @@
 # Dev News
 
-https://github.com/user-attachments/assets/0e74116f-8375-455b-838d-5e2494ee9f2b
+[🎬 Watch a Live Demo of the Project](https://github.com/user-attachments/assets/0e74116f-8375-455b-838d-5e2494ee9f2b)
 
 A modern, feature-rich news aggregator platform for developers, built with Next.js and Tailwind CSS. It provides a clean, dark-themed interface to browse and read the latest articles and signals from the tech world.
 
@@ -16,7 +16,7 @@ Dev News is a web application designed to keep developers up-to-date with the la
 
 - **Modern UI:** A beautiful dark mode interface with subtle animations and effects.
 - **Dynamic Content:** Fetches and displays a list of articles from a local data source.
-- **Modal Article View:** Clicking an article opens it in a modal for a seamless reading experience, using Next.js's Intercepted Routes.
+- **Modal Article View:** Leverages **Next.js's Intercepted Routes** to show articles in a modal, keeping the context of the main page while providing a focused reading experience.
 - **Detailed Article Page:** A dedicated page for each article with detailed information, including engagement stats (views, upvotes, downvotes) and author details.
 - **Internationalization (i18n):** Fully internationalized with support for English and Bengali (`en`/`bn`).
 - **Search Functionality:** A search bar to quickly find articles (UI implemented).
@@ -54,7 +54,7 @@ Make sure you have Node.js and npm installed on your machine.
     ```
 2.  Navigate to the project directory
     ```sh
-    cd your_repository
+    cd dev-news
     ```
 3.  Install NPM packages
     ```sh
