@@ -53,7 +53,9 @@ const SingleArticale = ({ singleArticaleData, dictionary }) => {
                   </span>
                 </div>
                 <span className="text-xs text-zinc-500">•</span>
-                <span>Published on {published_date}</span>
+                <span>
+                  {dictionary.singleArticle.publishedOn} {published_date}
+                </span>
               </div>
 
               <div className="mt-6 overflow-hidden rounded-2xl border border-white/10">
@@ -81,7 +83,9 @@ const SingleArticale = ({ singleArticaleData, dictionary }) => {
               style={{ animationDelay: "120ms" }}
             >
               <div className="rounded-2xl border border-white/10 bg-[var(--surface)] p-5 shadow-[0_24px_50px_rgba(5,8,16,0.55)]">
-                <h4 className="text-sm font-semibold text-white">Engagement</h4>
+                <h4 className="text-sm font-semibold text-white">
+                  {dictionary.singleArticle.engagement}
+                </h4>
                 <div className="mt-4 space-y-3 text-sm text-zinc-300">
                   <div className="flex items-center justify-between">
                     <span className="flex items-center gap-2">
@@ -95,7 +99,7 @@ const SingleArticale = ({ singleArticaleData, dictionary }) => {
                           fill="currentColor"
                         />
                       </svg>
-                      Upvotes
+                      {dictionary.singleArticle.upvotes}
                     </span>
                     <span className="text-white">
                       {formatCompactNumber(upvotes)}
@@ -113,7 +117,7 @@ const SingleArticale = ({ singleArticaleData, dictionary }) => {
                           fill="currentColor"
                         />
                       </svg>
-                      Downvotes
+                      {dictionary.singleArticle.downvotes}
                     </span>
                     <span className="text-white">
                       {formatCompactNumber(downvotes)}
@@ -140,7 +144,7 @@ const SingleArticale = ({ singleArticaleData, dictionary }) => {
                         strokeWidth="1.4"
                       />
                     </svg>
-                    Views
+                    {dictionary.singleArticle.views}
                   </span>
                   <span className="text-white">
                     {formatCompactNumber(views)}
@@ -155,7 +159,9 @@ const SingleArticale = ({ singleArticaleData, dictionary }) => {
               style={{ animationDelay: "200ms" }}
             >
               <div className="rounded-2xl border border-white/10 bg-[var(--surface)] p-5 shadow-[0_24px_50px_rgba(5,8,16,0.55)]">
-                <h4 className="text-sm font-semibold text-white">Tags</h4>
+                <h4 className="text-sm font-semibold text-white">
+                  {dictionary.singleArticle.tags}
+                </h4>
                 <div className="mt-4 flex flex-wrap gap-2 text-[11px] text-cyan-200/80">
                   {tags.map((tag, index) => (
                     <span
@@ -175,7 +181,9 @@ const SingleArticale = ({ singleArticaleData, dictionary }) => {
               style={{ animationDelay: "280ms" }}
             >
               <div className="rounded-2xl border border-white/10 bg-[var(--surface)] p-5 shadow-[0_24px_50px_rgba(5,8,16,0.55)]">
-                <h4 className="text-sm font-semibold text-white">Author</h4>
+                <h4 className="text-sm font-semibold text-white">
+                  {dictionary.singleArticle.author}
+                </h4>
                 <div className="mt-4 flex items-center gap-3">
                   <div className="rounded-full bg-white/10 p-[2px]">
                     <Image
@@ -190,11 +198,13 @@ const SingleArticale = ({ singleArticaleData, dictionary }) => {
                     <p className="text-sm font-medium text-white">
                       {author_name}
                     </p>
-                    <p className="text-xs text-zinc-400">Content Creator</p>
+                    <p className="text-xs text-zinc-400">
+                      {dictionary.singleArticle.authorRole}
+                    </p>
                   </div>
                 </div>
                 <p className="mt-4 text-xs text-zinc-400">
-                  Published on{" "}
+                  {dictionary.singleArticle.publishedOn}{" "}
                   <time dateTime={published_date}>{published_date}</time>
                 </p>
               </div>

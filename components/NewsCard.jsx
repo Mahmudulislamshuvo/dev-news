@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const NewsCard = async () => {
+const NewsCard = async ({ dictionary }) => {
   const allArticalesData = await getAllArticalesDynamic();
 
   return (

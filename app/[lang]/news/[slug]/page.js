@@ -7,10 +7,6 @@ const SingleArticalePage = async ({ params: { slug, lang } }) => {
   const singleArticaleData = await getArticaleBySlugDynamic(slug);
   const dictionary = await getDictionary(lang);
 
-  console.log(dictionary);
-
-  console.log(dictionary);
-
   if (!singleArticaleData) {
     notFound();
   }
